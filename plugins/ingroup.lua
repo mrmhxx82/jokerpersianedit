@@ -1557,7 +1557,7 @@ if msg.to.type == 'chat' then
         return "Create a link using /newlink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-      return "Group link:\n"..group_link
+      return "لینک گروه:\n"..group_link
     end
     if matches[1] == 'setowner' and matches[2] then
       if not is_owner(msg) then
@@ -1724,10 +1724,10 @@ return {
   "^[#!/](rules)$",
   "^[#!/](about)$",
   "^[#!/](setname) (.*)$",
-  "^[#!/](setphoto)$",
+  "^(تغییر تصویر)$",
   "^[#!/](promote) (.*)$",
   "^[#!/](promote)",
-  "^[#!/](help)$",
+  "^(راهنما)$",
   "^[#!/](clean) (.*)$",
   "^[#!/](kill) (chat)$",
   "^[#!/](kill) (realm)$",
@@ -1735,8 +1735,8 @@ return {
   "^[#!/](demote)",
   "^[#!/](set) ([^%s]+) (.*)$",
   "^[#!/](lock) (.*)$",
-  "^[#!/](setowner) (%d+)$",
-  "^[#!/](setowner)",
+  "^(تنظیم مدیر) (%d+)$",
+  "^(تنظیم مدیر)",
   "^[#!/](owner)$",
   "^[#!/](res) (.*)$",
   "^[#!/](setgpowner) (%d+) (%d+)$",-- (group id) (owner id)
@@ -1746,7 +1746,7 @@ return {
   "^[#!/](public) (.*)$",
   "^[#!/](modlist)$",
   "^[#!/](newlink)$",
-  "^[#!/](link)$",
+  "^(لینک)$",
   "^[#!/]([Mm]ute) ([^%s]+)$",
   "^[#!/]([Uu]nmute) ([^%s]+)$",
   "^[#!/]([Mm]uteuser)$",
